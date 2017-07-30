@@ -1,0 +1,18 @@
+CODE:
+class MyBook extends Book
+    {
+       int price;
+       MyBook(String t,String a,int prc)
+           {
+           super(t,a);
+           price=prc;
+       }
+    void display()
+        {
+            System.out.println("Title:"+" "+title);
+            System.out.println("Author:"+" "+author);
+            System.out.println("Price:"+" "+price);
+    }
+}
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security St
