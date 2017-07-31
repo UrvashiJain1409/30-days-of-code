@@ -1,46 +1,42 @@
 CODE:
-import java.io.*;
-import java.util.*;
-public class Person {
-    private int age;	
-  
-	public Person(int initialAge) {
-        age= initialAge;
-	}
+class Person{
+    public:
+        int age;
+        Person(int initialAge);
+        void amIOld();
+        void yearPasses();
+    };
 
-	public void amIOld() {
-        if(age<0)
+    Person::Person(int initialAge){
+        // Add some more code to run some checks on initialAge
+    if(initialAge<0)
         {
-        System.out.println("Age is not valid, setting age to 0.");
-        System.out.println("You are young.");
+        cout<<"Age is not valid, setting age to 0."<<endl;
+        age=0;
+    }
+        else
+            {
+            age=initialAge;
         }
-        else if(age<13)
-        System.out.println("You are young.");
-        else if(13<=age && age<18)
-        System.out.println("You are a teenager.");
-        else if(age>=18)
-        System.out.println("You are old.");
-	}
+    }
 
-	public void yearPasses() {
-        age++;
-	}
-  public static void main(String[] args)
-  {
-    Scanner sc= new Scanner(System.in);
-    int T= sc.nextInt();
-    for(i=0;i<T;i++)
-    {
-      int age= sc.nextInt();
-      Person p= new Person(age);
-      p.amIOld;
-      for(int j=0;j<3;j++)
-      {
-        p.yearPasses();
-      }
-     p.amIOld();
-     System.out.println();
-    }   
-    sc.close();
-   }
-}
+    void Person::amIOld(){
+        // Do some computations in here and print out the correct statement to the console 
+    if(age<13)
+        {
+        cout<<"You are young."<<endl;
+    }
+        else if(age>=13&&age<18)
+            {
+            cout<<"You are a teenager."<<endl; 
+        }
+        else
+            {
+            cout<<"You are old."<<endl;
+        }
+    }
+
+    void Person::yearPasses(){
+        // Increment the age of the person in here
+            age=age+1;
+    }
